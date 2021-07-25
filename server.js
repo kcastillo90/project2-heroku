@@ -46,14 +46,6 @@ app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
 
 
 //___________________
-// Routes
-//___________________
-//localhost:3000
-app.get('/' , (req, res) => {
-  res.render('home_index.ejs')
-});
-
-//___________________
 //Listener
 //___________________
 app.listen(PORT, () => console.log( 'Listening on port:', PORT))
