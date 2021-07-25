@@ -5,7 +5,22 @@
     <%- include ('./partials/header.ejs') %>
   </head>
   <body>
-    <h1>Welcome to my shady brokerage site!</h1>
-    
+    <h2>Top Stocks List</h2>
+    <table>
+      <tr>
+        <th>Ticker Symbol</th>
+        <th>Company Name</th>
+        <th>Last Closing Price</th>
+        <th>Description</th>
+      </tr>
+      <% for(let i = 0; i < stocks.length; i++) { %>
+        <tr>
+          <td>stocks[i].ticker</td>
+          <td>stocks[i].company</td>
+          <td>stocks[i].price</td>
+          <td><a href="#">More Data...</a></td>
+        </tr>
+      <% } %>
+    </table>
   </body>
 </html>
