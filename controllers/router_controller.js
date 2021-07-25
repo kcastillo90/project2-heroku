@@ -23,6 +23,7 @@ router.get('/seed', (req, res) => {
   Stock.create(stockSeed, (error, data) => {
     error ? res.status(400).json(error) : res.status(200).json(data)
   })
+  res.redirect('/')
 })
 
 
