@@ -29,7 +29,12 @@ router.get('/seed', (req, res) => {
 
 
 
-
+// Delete
+router.delete('/:id', (req, res) => {
+  Stock.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect('/')
+  })
+})
 
 
 // Show
