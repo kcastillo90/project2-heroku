@@ -8,6 +8,14 @@ const stockSeed = require('../models/seed.js')
 //___________________
 //localhost:3000
 
+// Seed
+router.get('/', (req, res) => {
+  Stock.deleteMany({}, () => {})
+  Stock.create(stockSeed, (error, data) => {
+    error ? res.status(400).json(error) : res.status(200).json(data)
+  })
+})
+
 // Index
 router.get('/' , (req, res) => {
   Stock.find({}, (error, allStocks) => {
@@ -17,13 +25,7 @@ router.get('/' , (req, res) => {
   })
 })
 
-// Seed
-router.get('/', (req, res) => {
-  Stock.deleteMany({}, () => {})
-  Stock.create(stockSeed, (error, data) => {
-    error ? res.status(400).json(error) : res.status(200).json(data)
-  })
-})
+
 
 
 
