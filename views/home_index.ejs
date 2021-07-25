@@ -13,7 +13,7 @@
         <th>Last Closing Price</th>
       </tr>
       <% for(let i = 0; i < stocks.length; i++) { %>
-        <tr onclick="location.href='/<%=stocks[i].id%>'">
+        <tr>
           <td><%=stocks[i].ticker%></td>
           <td><%=stocks[i].company%></td>
           <td><%=stocks[i].price%></td>

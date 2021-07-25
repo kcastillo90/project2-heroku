@@ -35,8 +35,10 @@ router.get('/seed', (req, res) => {
 // Show
 router.get('/:id', (req, res) => {
   Stock.find(req.params.id, (error, foundStock) => {
+    console.log(req.params.id)
     res.render('stock_show.ejs', {
       stock: foundStock
+      console.log(stock)
     })
   })
 })
