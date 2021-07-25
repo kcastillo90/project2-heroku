@@ -49,7 +49,7 @@ app.use(methodOverride('_method'))// allow POST, PUT and DELETE from a form
 // Router
 //___________________
 const routerController = require('./controllers/router_controller.js')
-app.use('/brokerage', controller)
+app.use('/', controller)
 
 
 

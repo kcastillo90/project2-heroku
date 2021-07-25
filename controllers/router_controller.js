@@ -7,7 +7,7 @@ const stockSeed = require('../models/seed.js')
 // Routes
 //___________________
 //localhost:3000
-router.get('/' , (req, res) => {
+router.get('/welcome' , (req, res) => {
   res.render('home_index.ejs')
 });
 
