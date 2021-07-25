@@ -32,7 +32,14 @@ router.get('/seed', (req, res) => {
 
 
 
-
+// Show
+router.get('/:id', (req, res) => {
+  Stock.find(req.params.id, (error, foundStock) => {
+    res.render('stock_show.ejs', {
+      stock: foundStock
+    })
+  })
+})
 
 
 module.exports = router

@@ -11,14 +11,12 @@
         <th>Ticker Symbol</th>
         <th>Company Name</th>
         <th>Last Closing Price</th>
-        <th>Description</th>
       </tr>
       <% for(let i = 0; i < stocks.length; i++) { %>
-        <tr>
+        <tr onclick="location.href='/<%=stocks[i].id%>'">
           <td><%=stocks[i].ticker%></td>
           <td><%=stocks[i].company%></td>
           <td><%=stocks[i].price%></td>
-          <td><a href="#">More Data...</a></td>
         </tr>
       <% } %>
     </table>
