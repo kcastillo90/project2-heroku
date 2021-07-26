@@ -4,7 +4,7 @@ const users = express.Router()
 const User = require('../models/users.js')
 
 users.get('/new_user', (req, res) => {
-  res.render('users/user_new.ejs')
+  res.render('views/users/user_new.ejs')
 })
 
 users.post('/', (req, res) => {
