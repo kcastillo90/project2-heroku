@@ -1,16 +1,4 @@
 <header>
   <h1 id='header-title'>Killingworth Financial</h1>
-  <% if (currentUser == undefined) { %>
-    <h5>Welcome back, <%=currentUser.firstname%></h5>
-    <form action="/sessions?_method=DELETE" method="POST" id="logout-btn">
-      <input type="submit" name="logout" value="Log Out" class="">
-    </form>
-  <% } else { %>
-    <form action="/new_user" method="GET" id="create-account-btn">
-      <input type="submit" name="create-user" value="CREATE AN ACCOUNT">
-    </form>
-    <form action="#" method="GET" id="login-btn">
-      <input type="submit" name="create-user" value="LOG IN">
-    </form>
-  <% } %>
+
 </header>
