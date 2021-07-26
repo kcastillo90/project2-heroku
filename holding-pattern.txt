@@ -11,3 +11,10 @@
     <input type="submit" name="create-user" value="LOG IN">
   </form>
 <% } %>
+
+
+goes in user controller app.get inside render:
+,
+{
+  currentUser: req.session.currentUser
+}
