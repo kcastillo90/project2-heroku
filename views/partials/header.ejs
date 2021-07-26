@@ -1,6 +1,6 @@
 <header>
   <h1 id='header-title'>Killingworth Financial</h1>
-  <% if (currentUser) { %>
+  <% if (currentUser === undefined) { %>
     <h5>Welcome back, <%=currentUser.firstname%></h5>
     <form action="/sessions?_method=DELETE" method="POST" id="logout-btn">
       <input type="submit" name="logout" value="Log Out" class="">
