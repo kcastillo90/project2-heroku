@@ -70,7 +70,7 @@ router.put('/:id', isAuthenticated, (req, res) => {
 })
 
 // Delete
-router.delete('/:id', (req, res) => {
+router.delete('/:id', isAuthenticated, (req, res) => {
   Stock.findByIdAndRemove(req.params.id, (err, data) => {
     res.redirect('/')
   })
@@ -79,7 +79,6 @@ router.delete('/:id', (req, res) => {
 
 // Show
 router.get('/:id', (req, res) => {
-  if (req.session.currentUser) {
     Stock.findById(req.params.id, (error, foundStock) => {
       console.log(foundStock);
       res.render('stock_show.ejs', {
@@ -87,7 +86,6 @@ router.get('/:id', (req, res) => {
         currentUser: req.session.currentUser
       })
     })
-  }
 })
 
 
