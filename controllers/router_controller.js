@@ -3,6 +3,14 @@ const router = express.Router()
 const Stock = require('../models/stocks.js')
 const stockSeed = require('../models/seed.js')
 
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
+
 //___________________
 // Routes
 //___________________
@@ -28,7 +36,7 @@ router.get('/seed', (req, res) => {
 })
 
 // Get new
-router.get('/new', (req, res) => {
+router.get('/new', isAuthenticated (req, res) => {
   res.render('stock_new.ejs', {
       currentUser: req.session.currentUser
   })
@@ -42,7 +50,7 @@ router.post('/', (req, res) => {
 })
 
 // Edit get
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', isAuthenticated (req, res) => {
   Stock.findById(req.params.id, (error, foundStock) => {
     res.render(
       'stock_edit.ejs',
@@ -55,7 +63,7 @@ router.get('/:id/edit', (req, res) => {
 })
 
 // Edit put
-router.put('/:id', (req, res) => {
+router.put('/:id', isAuthenticated (req, res) => {
   Stock.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedStock) => {
     res.redirect(`/${req.params.id}`)
   })
@@ -71,13 +79,15 @@ router.delete('/:id', (req, res) => {
 
 // Show
 router.get('/:id', (req, res) => {
-  Stock.findById(req.params.id, (error, foundStock) => {
-    console.log(foundStock);
-    res.render('stock_show.ejs', {
-      stock: foundStock,
-      currentUser: req.session.currentUser
+  if (req.session.currentUser) {
+    Stock.findById(req.params.id, (error, foundStock) => {
+      console.log(foundStock);
+      res.render('stock_show.ejs', {
+        stock: foundStock,
+        currentUser: req.session.currentUser
+      })
     })
-  })
+  }
 })
 
 

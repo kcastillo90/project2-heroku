@@ -7,7 +7,7 @@
   </head>
   <body>
     <h2>Top Stocks List</h2>
-    <button type="button" name="add-stock" onclick="location.href='/new'">ADD STOCK</button>
+    <button type="button" name="add-stock" onclick="location.href='/new'" id="add-btn">ADD STOCK</button>
     <table>
       <tr>
         <th>Ticker Symbol</th>
@@ -21,7 +21,7 @@
           <td><%=stocks[i].price%></td>
           <td>
             <form action="/<%=stocks[i].id%>?_method=DELETE" method="POST" class="index-delete-btn">
-              <input type="submit" value="REMOVE" class="remove-btn"/>
+              <input type="submit" value="REMOVE" id="remove-btn"/>
             </form>
           </td>
         </tr>
