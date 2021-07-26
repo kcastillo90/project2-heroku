@@ -36,7 +36,7 @@ router.get('/seed', (req, res) => {
 })
 
 // Get new
-router.get('/new', isAuthenticated (req, res) => {
+router.get('/new', isAuthenticated, (req, res) => {
   res.render('stock_new.ejs', {
       currentUser: req.session.currentUser
   })
@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
 })
 
 // Edit get
-router.get('/:id/edit', isAuthenticated (req, res) => {
+router.get('/:id/edit', isAuthenticated, (req, res) => {
   Stock.findById(req.params.id, (error, foundStock) => {
     res.render(
       'stock_edit.ejs',
@@ -63,7 +63,7 @@ router.get('/:id/edit', isAuthenticated (req, res) => {
 })
 
 // Edit put
-router.put('/:id', isAuthenticated (req, res) => {
+router.put('/:id', isAuthenticated, (req, res) => {
   Stock.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedStock) => {
     res.redirect(`/${req.params.id}`)
   })
