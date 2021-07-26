@@ -26,9 +26,30 @@ router.get('/seed', (req, res) => {
   res.redirect('/')
 })
 
+// Get new
 
 
+// Create new
 
+
+// Edit get
+router.get('/:id/edit', (req, res) => {
+  Stock.findById(req.params.id, (error, foundStock) => {
+    res.render(
+      'stock_edit.ejs',
+      {
+        stock: foundStock
+      }
+    )
+  })
+})
+
+// Edit put
+router.put('/:id', (req, res) => {
+  Stock.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedStock) => {
+    res.redirect(`/${req.params.id}`)
+  })
+})
 
 // Delete
 router.delete('/:id', (req, res) => {

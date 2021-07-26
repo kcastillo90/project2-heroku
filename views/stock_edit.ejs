@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('./partials/head.ejs') %>
+    <title>Edit Security</title>
+  </head>
+  <header>
+    
+  </header>
+  <body>
+    <h2>Edit <%=stock.company%></h2>
+    <button type="button" name="back" onclick="location.href='/<%=stock.id%>'">BACK TO STOCK</button>
+    <form class="edit-form" action="/<%=stock.id%>?_method=PUT" method="POST">
+      <div class="formfield">
+        <label for="ticker">Ticker Symbol: </label>
+        <input type="text" name="ticker" value="<%=stock.ticker%>">
+      </div>
+      <div class="formfield">
+        <label for="company">Company: </label>
+        <input type="text" name="company" value="<%=stock.company%>">
+      </div>
+      <div class="formfield">
+        <label for="price">Last Closing Price: </label>
+        <input type="text" name="price" value="<%=stock.price%>">
+      </div>
+      <div class="formfield">
+        <label for="ticker">Description: </label>
+        <input type="text" name="description" value="<%=stock.description%>">
+      </div>
+      <input type="submit" value="SUBMIT" class="">
+    </form>
+  </body>
+</html>
