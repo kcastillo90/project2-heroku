@@ -12,7 +12,8 @@ const stockSeed = require('../models/seed.js')
 router.get('/' , (req, res) => {
   Stock.find({}, (error, allStocks) => {
     res.render('home_index.ejs', {
-      stocks: allStocks
+      stocks: allStocks,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -28,7 +29,9 @@ router.get('/seed', (req, res) => {
 
 // Get new
 router.get('/new', (req, res) => {
-  res.render('stock_new.ejs')
+  res.render('stock_new.ejs', {
+      currentUser: req.session.currentUser
+  })
 })
 
 // Create new
@@ -44,7 +47,8 @@ router.get('/:id/edit', (req, res) => {
     res.render(
       'stock_edit.ejs',
       {
-        stock: foundStock
+        stock: foundStock,
+        currentUser: req.session.currentUser
       }
     )
   })
@@ -70,7 +74,8 @@ router.get('/:id', (req, res) => {
   Stock.findById(req.params.id, (error, foundStock) => {
     console.log(foundStock);
     res.render('stock_show.ejs', {
-      stock: foundStock
+      stock: foundStock,
+      currentUser: req.session.currentUser
     })
   })
 })
