@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('./partials/head.ejs') %>
+    <title>Edit Security</title>
+  </head>
+  <header>
+    <h1>Killingworth Financial</h1>
+  </header>
+  <body>
+    <h2>Add New Security</h2>
+    <button type="button" name="back" onclick="location.href='/'">BACK TO STOCKS LIST</button>
+    <form class="form" action="/" method="POST">
+      <div class="formfield">
+        <label for="ticker">Ticker Symbol: </label>
+        <input type="text" name="ticker" placeholder="(e.g., AAPL, GM, etc.)"/>
+      </div>
+      <div class="formfield">
+        <label for="company">Company: </label>
+        <input type="text" name="company" placeholder="(e.g., Apple Inc., General Motors Inc., etc.)"/>
+      </div>
+      <div class="formfield">
+        <label for="price">Last Closing Price: $</label>
+        <input type="text" name="price" placeholder="(e.g. 23.72)"/>
+      </div>
+      <div class="formfield">
+        <label for="ticker">Description: </label>
+        <textarea name="description" placeholder="Company description here..."></textarea>
+      </div>
+      <input type="submit" value="SUBMIT" class=""/>
+    </form>
+  </body>
+</html>

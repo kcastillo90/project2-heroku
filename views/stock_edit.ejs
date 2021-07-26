@@ -5,29 +5,29 @@
     <title>Edit Security</title>
   </head>
   <header>
-    
+    <h1>Killingworth Financial</h1>
   </header>
   <body>
     <h2>Edit <%=stock.company%></h2>
     <button type="button" name="back" onclick="location.href='/<%=stock.id%>'">BACK TO STOCK</button>
-    <form class="edit-form" action="/<%=stock.id%>?_method=PUT" method="POST">
+    <form class="form" action="/<%=stock.id%>?_method=PUT" method="POST">
       <div class="formfield">
         <label for="ticker">Ticker Symbol: </label>
-        <input type="text" name="ticker" value="<%=stock.ticker%>">
+        <input type="text" name="ticker" value="<%=stock.ticker%>"/>
       </div>
       <div class="formfield">
         <label for="company">Company: </label>
-        <input type="text" name="company" value="<%=stock.company%>">
+        <input type="text" name="company" value="<%=stock.company%>"/>
       </div>
       <div class="formfield">
         <label for="price">Last Closing Price: </label>
-        <input type="text" name="price" value="<%=stock.price%>">
+        <input type="text" name="price" value="<%=stock.price%>"/>
       </div>
       <div class="formfield">
         <label for="ticker">Description: </label>
-        <input type="text" name="description" value="<%=stock.description%>">
+        <textarea name="description"><%=stock.description%></textarea>
       </div>
-      <input type="submit" value="SUBMIT" class="">
+      <input type="submit" value="SUBMIT" class=""/>
     </form>
   </body>
 </html>

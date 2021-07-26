@@ -27,10 +27,16 @@ router.get('/seed', (req, res) => {
 })
 
 // Get new
-
+router.get('/new', (req, res) => {
+  res.render('stock_new.ejs')
+})
 
 // Create new
-
+router.post('/', (req, res) => {
+  Stock.create(req.body, (error, addedStock) => {
+    res.redirect('/')
+  })
+})
 
 // Edit get
 router.get('/:id/edit', (req, res) => {
