@@ -13,7 +13,7 @@ router.get('/' , (req, res) => {
   Stock.find({}, (error, allStocks) => {
     res.render('home_index.ejs', {
       stocks: allStocks,
-      // currentUser: req.session.currentUser
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -30,7 +30,7 @@ router.get('/seed', (req, res) => {
 // Get new
 router.get('/new', (req, res) => {
   res.render('stock_new.ejs', {
-      // currentUser: req.session.currentUser
+      currentUser: req.session.currentUser
   })
 })
 
@@ -48,7 +48,7 @@ router.get('/:id/edit', (req, res) => {
       'stock_edit.ejs',
       {
         stock: foundStock,
-        // currentUser: req.session.currentUser
+        currentUser: req.session.currentUser
       }
     )
   })
@@ -75,7 +75,7 @@ router.get('/:id', (req, res) => {
     console.log(foundStock);
     res.render('stock_show.ejs', {
       stock: foundStock,
-      // currentUser: req.session.currentUser
+      currentUser: req.session.currentUser
     })
   })
 })

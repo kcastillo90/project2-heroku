@@ -4,7 +4,7 @@ const users = express.Router()
 const User = require('../models/users.js')
 
 users.get('/new', (req, res) => {
-  res.render('users/user_new.ejs')
+  res.render('users/user_new.ejs', currentUser: req.session.currentUser)
 })
 
 users.post('/', (req, res) => {
