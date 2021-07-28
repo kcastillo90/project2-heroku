@@ -83,11 +83,13 @@ input[type=password] {
 
 #alt-header-btn {
   font-size: 1.5vh;
+  font-family: 'Roboto', sans-serif;
 }
 
 #add-btn {
   margin: 0 0 2vh 0;
   font-size: 1.5vh;
+  font-family: 'Roboto', sans-serif;
 }
 
 .table-container {
@@ -101,12 +103,14 @@ table {
 }
 
 th {
-  font-size: 1.5vh
+  font-size: 1.5vh;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* For portfolio page */
 #back-to-portfolio-btn {
   font-size: 1.5vh;
+  font-family: 'Roboto', sans-serif;
   margin: 2vh auto;
 }
 
@@ -116,7 +120,7 @@ textarea {
     width: 75vw;
 }
 
-#add-stock-form {
+.stock-form {
   width: 75vw;
   display: flex;
   flex-direction: column;
@@ -136,21 +140,25 @@ textarea {
 /* For show page */
 #back-to-stocks-btn {
   font-size: 1.5vh;
+  font-family: 'Roboto', sans-serif;
   margin: 0 auto 3vh auto;
 }
 
 #edit-btn {
   font-size: 1.5vh;
+  font-family: 'Roboto', sans-serif;
   margin: 2vh auto;
 }
 
-#show-company {
+.company {
   font-size: 4vh;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 2vh;
 }
 
 .show-details {
   font-size: 3vh;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 2vh;
 }
 
@@ -158,8 +166,22 @@ textarea {
   width: 90vw;
   height: auto;
   font-size: 2vh;
+  font-family: 'Roboto', sans-serif;
   margin-top: 2vh;
   word-wrap: break-word;
 }
+
+#edit-stock-submit {
+  margin: 2vh auto;
+  align-self: center;
+}
+
+/* For edit page */
+#back-to-stocks-list-btn {
+  font-size: 1.5vh;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto 3vh auto;
+}
+
 
 /*  */

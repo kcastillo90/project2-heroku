@@ -8,7 +8,7 @@
   <body>
     <h2 id="add-stock-h2">Add To Your Portfolio</h2>
     <button type="button" name="back" onclick="location.href='/users/<%=currentUser._id%>'" class="btn btn-secondary" id="back-to-portfolio-btn">BACK TO PORTFOLIO</button>
-    <form id="add-stock-form" action="/users/addstock/<%=currentUser._id%>?_method=PUT" method="POST">
+    <form class="stock-form" action="/users/addstock/<%=currentUser._id%>?_method=PUT" method="POST">
         <label for="ticker" class="form-label">Ticker Symbol: </label>
         <input type="text" name="ticker" class="form-control" placeholder="(e.g., AAPL, GM, etc.)"/>
         <label for="company" class="form-label">Company: </label>

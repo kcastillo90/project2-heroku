@@ -7,7 +7,7 @@
   </head>
   <body>
     <button type="button" name="back" onclick="location.href='/users/currentUser._id'" class="btn btn-secondary" id="back-to-stocks-btn">BACK TO PORTFOLIO</button>
-    <h2 id="show-company"><%=stock.company%></h2>
+    <h2 class="company"><%=stock.company%></h2>
     <h3 class="show-details">Ticker Symbol: <%=stock.ticker%></h3>
     <h3 class="show-details">Last Closing Price: $<%=stock.price%></h3>
     <p id="show-description"><%=stock.description%></p>
