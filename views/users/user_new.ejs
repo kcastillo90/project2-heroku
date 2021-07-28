@@ -7,25 +7,26 @@
   </head>
   <body>
     <h1 class="login-h1">Create Account</h1>
+    <h6>* required fields</h6>
     <form action="/users" method="post">
       <div class="formfield">
-        <label for="firstname" class="form-label">First Name: </label>
+        <label for="firstname" class="form-label">First Name<sup>*</sup> </label>
         <input type="text" name="firstname" class="form-control" required/>
       </div>
       <div class="formfield">
-        <label for="middlename" class="form-label">Middle Name: </label>
+        <label for="middlename" class="form-label">Middle Name </label>
         <input type="text" name="middlename" class="form-control"/>
       </div>
       <div class="formfield">
-        <label for="lastname" class="form-label">Last Name: </label>
+        <label for="lastname" class="form-label">Last Name<sup>*</sup> </label>
         <input type="text" name="lastname" class="form-control" required/>
       </div>
       <div class="formfield">
-        <label for="username" class="form-label">Username: </label>
+        <label for="username" class="form-label">Username<sup>*</sup> </label>
         <input type="text" name="username" class="form-control" required/>
       </div>
       <div class="formfield">
-        <label for="password" class="form-label">Password: </label>
+        <label for="password" class="form-label">Password<sup>*</sup> </label>
         <input type="password" name="password" class="form-control" required/>
       </div>
       <input type="submit" value="SUBMIT" class="btn btn-success"  id="create-account-submit">
