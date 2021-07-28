@@ -53,7 +53,7 @@ body {
 textarea {
   resize: none;
   height: 20vh;
-  width: 25vw;
+  width: 75vw;
 }
 
 #login-container {
@@ -101,11 +101,19 @@ input[type=password] {
   font-size: 1.5vh;
 }
 
-table {
-  font-size: 1.25vh;
+.table-container {
+  width: 95vw;
 }
 
+table {
+  font-size: 1.25vh;
+  width: 90vw;
+  text-align: center;
+}
 
+th {
+  font-size: 1.5vh
+}
 
 
 
