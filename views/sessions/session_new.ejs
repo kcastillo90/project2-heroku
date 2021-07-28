@@ -2,17 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <%- include ('../partials/head.ejs') %>
+    <%- include ('../partials/alt_header.ejs') %>
   </head>
   <body>
-    <div class="container">
-      <h1>LOGIN</h1>
+    <div id="login-container">
+      <h1 class="login-h1">LOGIN</h1>
       <form action="/sessions" method="POST">
-        <label for="username">Username: </label>
-        <input type="text" name="username" required/>
-        <label for="color">Password: </label>
-        <input type="password" name="password"/>
+        <label for="username" class="form-label">Username: </label>
+        <input type="text" name="username" class="form-control" required/>
+        <label for="color" class="form-label">Password: </label>
+        <input type="password" name="password" class="form-control"/>
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="btn btn-success">
       </form>
     </div>
   </body>

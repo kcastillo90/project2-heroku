@@ -1,16 +1,18 @@
 <header>
-  <h1 id='header-title'>Random Financial</h1>
+  <h1 class='header-title'>Random Financial</h1>
   <% if (currentUser) { %>
-    <h5>Welcome back, <%=currentUser.firstname%></h5>
+    <h5 id="header-welcome">Welcome back, <%=currentUser.firstname%></h5>
     <form action="/sessions?_method=DELETE" method="POST" id="logout-btn">
-      <input type="submit" name="logout" value="Log Out" class="">
+      <input type="submit" name="logout" value="Log Out" class="btn btn-danger">
     </form>
   <% } else { %>
-    <form action="/users/new" method="GET" id="create-account-btn">
-      <input type="submit" name="create-user" value="CREATE AN ACCOUNT">
-    </form>
-    <form action="/sessions/new" method="GET" id="login-btn">
-      <input type="submit" name="login" value="LOG IN">
-    </form>
+    <div id="login-create-btns">
+      <form action="/users/new" method="GET" id="create-account-btn">
+        <input type="submit" name="create-user" value="SIGNUP" class="btn btn-primary">
+      </form>
+      <form action="/sessions/new" method="GET" id="login-btn">
+        <input type="submit" name="login" value="LOGIN" class="btn btn-success">
+      </form>
+    </div>
   <% } %>
 </header>
