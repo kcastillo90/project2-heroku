@@ -10,7 +10,10 @@
     <h3>Ticker Symbol: <%=stock.ticker%></h3>
     <h3>Last Closing Price: $<%=stock.price%></h3>
     <p><%=stock.description%></p>
-    <button type="button" name="back" onclick="location.href='/'">BACK TO HOME</button>
+    <button type="button" name="back" onclick="location.href='/users/currentUser._id'">BACK TO HOME</button>
     <button type="button" name="edit-stock" onclick="location.href='/<%=stock.id%>/edit'" id="edit-btn">EDIT SECURITY</button>
+    <form action="/<%=stock._id%>?_method=DELETE" method="POST" class="index-delete-btn">
+      <input type="submit" value="REMOVE" id="remove-btn"/>
+    </form>
   </body>
 </html>
