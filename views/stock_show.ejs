@@ -6,14 +6,14 @@
     <title><%=stock.ticker%></title>
   </head>
   <body>
-    <h2><%=stock.company%></h2>
-    <h3>Ticker Symbol: <%=stock.ticker%></h3>
-    <h3>Last Closing Price: $<%=stock.price%></h3>
-    <p><%=stock.description%></p>
-    <button type="button" name="back" onclick="location.href='/users/currentUser._id'">BACK TO HOME</button>
-    <button type="button" name="edit-stock" onclick="location.href='/<%=stock.id%>/edit'" id="edit-btn">EDIT SECURITY</button>
-    <form action="/<%=stock._id%>?_method=DELETE" method="POST" class="index-delete-btn">
-      <input type="submit" value="REMOVE" id="remove-btn"/>
+    <button type="button" name="back" onclick="location.href='/users/currentUser._id'" class="btn btn-secondary" id="back-to-stocks-btn">BACK TO PORTFOLIO</button>
+    <h2 id="show-company"><%=stock.company%></h2>
+    <h3 class="show-details">Ticker Symbol: <%=stock.ticker%></h3>
+    <h3 class="show-details">Last Closing Price: $<%=stock.price%></h3>
+    <p id="show-description"><%=stock.description%></p>
+    <button type="button" name="edit-stock" onclick="location.href='/<%=stock.id%>/edit'" class="btn btn-primary" id="edit-btn">EDIT STOCK</button>
+    <form action="/<%=stock._id%>?_method=DELETE" method="POST" >
+      <input type="submit" value="REMOVE" id="remove-btn" class="btn btn-danger"/>
     </form>
   </body>
 </html>
