@@ -3,29 +3,21 @@
   <head>
     <%- include ('./partials/head.ejs') %>
     <%- include ('./partials/header.ejs') %>
-    <title>Edit Security</title>
+    <title>Edit Stock</title>
   </head>
   <body>
-    <h2>Add New Security To Your Portfolio</h2>
-    <button type="button" name="back" onclick="location.href='/users/<%=currentUser._id%>'">BACK TO PORTFOLIO</button>
-    <form class="form" action="/users/addstock/<%=currentUser._id%>?_method=PUT" method="POST">
-      <div class="formfield">
-        <label for="ticker">Ticker Symbol: </label>
-        <input type="text" name="ticker" placeholder="(e.g., AAPL, GM, etc.)"/>
-      </div>
-      <div class="formfield">
-        <label for="company">Company: </label>
-        <input type="text" name="company" placeholder="(e.g., Apple Inc., General Motors Inc., etc.)"/>
-      </div>
-      <div class="formfield">
-        <label for="price">Last Closing Price: $</label>
-        <input type="text" name="price" placeholder="(e.g. 23.72)"/>
-      </div>
-      <div class="formfield">
-        <label for="ticker">Description: </label>
-        <textarea name="description" placeholder="Company description here..."></textarea>
-      </div>
-      <input type="submit" value="SUBMIT" class=""/>
+    <h2 id="add-stock-h2">Add To Your Portfolio</h2>
+    <button type="button" name="back" onclick="location.href='/users/<%=currentUser._id%>'" class="btn btn-secondary" id="back-to-portfolio-btn">BACK TO PORTFOLIO</button>
+    <form id="add-stock-form" action="/users/addstock/<%=currentUser._id%>?_method=PUT" method="POST">
+        <label for="ticker" class="form-label">Ticker Symbol: </label>
+        <input type="text" name="ticker" class="form-control" placeholder="(e.g., AAPL, GM, etc.)"/>
+        <label for="company" class="form-label">Company: </label>
+        <input type="text" name="company" class="form-control" placeholder="(e.g., Apple Inc., General Motors Inc., etc.)"/>
+        <label for="price" class="form-label">Last Closing Price: $</label>
+        <input type="text" name="price" class="form-control" placeholder="(e.g. 23.72)"/>
+        <label for="ticker" class="form-label" id="description-box">Description: </label>
+        <textarea name="description" class="form-control" placeholder="Company description here..."></textarea>
+        <input type="submit" value="SUBMIT" id="add-stock-submit" class="btn btn-success"/>
     </form>
   </body>
 </html>

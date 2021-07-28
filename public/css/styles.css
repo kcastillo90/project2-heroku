@@ -50,12 +50,6 @@ body {
   margin: 0;
 }
 
-textarea {
-  resize: none;
-  height: 20vh;
-  width: 75vw;
-}
-
 #login-container {
   display: flex;
   flex-direction: column;
@@ -115,13 +109,33 @@ th {
   font-size: 1.5vh
 }
 
+#back-to-portfolio-btn {
+  font-size: 1.5vh;
+  margin: 2vh auto;
+}
 
+textarea {
+    resize: none;
+    height: 30vh;
+    width: 75vw;
+}
 
+#add-stock-form {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
+#add-stock-h2 {
+  font-size: 3vh;
+  font-family: 'Roboto', sans-serif;
+}
 
-
-
-
+#add-stock-submit {
+  margin: 2vh auto;
+  align-self: center;
+}
 
 
 
