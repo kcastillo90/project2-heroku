@@ -7,7 +7,7 @@
   </head>
   <body>
     <h2 class="company">Edit Stock</h2>
-    <button type="button" name="back" id="back-to-stocks-list-btn" class="btn btn-secondary" onclick="location.href='/<%=stock.id%>'">BACK TO STOCK</button>
+    <button type="button" name="back" id="back-to-stock" class="btn btn-secondary" onclick="location.href='/<%=stock.id%>'">BACK TO STOCK</button>
     <form class="stock-form" action="/<%=stock.id%>?_method=PUT" method="POST">
         <label for="ticker" class="form-label">Ticker Symbol: </label>
         <input type="text" name="ticker" class="form-control" value="<%=stock.ticker%>"/>
