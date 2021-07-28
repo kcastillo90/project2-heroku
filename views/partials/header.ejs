@@ -1,5 +1,5 @@
 <header>
-  <h1 id='header-title'>Killingworth</h1>
+  <h1 id='header-title'>Killingsworth Financial</h1>
   <% if (currentUser) { %>
     <h5>Welcome back, <%=currentUser.firstname%></h5>
     <form action="/sessions?_method=DELETE" method="POST" id="logout-btn">
@@ -10,7 +10,7 @@
       <input type="submit" name="create-user" value="CREATE AN ACCOUNT">
     </form>
     <form action="/sessions/new" method="GET" id="login-btn">
-      <input type="submit" name="create-user" value="LOG IN">
+      <input type="submit" name="login" value="LOG IN">
     </form>
   <% } %>
 </header>

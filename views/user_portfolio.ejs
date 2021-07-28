@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('./partials/head.ejs') %>
+    <%- include ('./partials/header.ejs') %>
+    <title>Welcome!</title>
+  </head>
+  <body>
+    <h2>My Stocks List</h2>
+    <button type="button" name="add-stock" onclick="location.href='/users/addstock'" id="add-btn">ADD STOCK</button>
+    <table>
+      <tr>
+        <th>Ticker Symbol</th>
+        <th>Company Name</th>
+        <th>Last Closing Price</th>
+      </tr>
+      <% for(let i = 0; i < stocks.length; i++) { %>
+        <tr onclick="location.href='/<%=stocks[i].id%>'">
+          <td><%=stocks[i].ticker%></td>
+          <td><%=stocks[i].company%></td>
+          <td>$<%=stocks[i].price%></td>
+          <td>
+            <form action="/<%=stocks[i].id%>?_method=DELETE" method="POST" class="index-delete-btn">
+              <input type="submit" value="REMOVE" id="remove-btn"/>
+            </form>
+          </td>
+        </tr>
+      <% } %>
+    </table>
+  </body>
+</html>

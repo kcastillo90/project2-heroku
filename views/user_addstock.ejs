@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('./partials/head.ejs') %>
+    <%- include ('./partials/header.ejs') %>
+    <title>Edit Security</title>
+  </head>
+  <body>
+    <h2>Add New Security To Your Portfolio</h2>
+    <button type="button" name="back" onclick="location.href='/users/<%=currentUser.id%>'">BACK TO PORTFOLIO</button>
+    <form class="form" action="/users/addstock/<%=currentUser._id%>?_method=PUT" method="POST">
+      <div class="formfield">
+        <label for="ticker">Ticker Symbol: </label>
+        <input type="text" name="ticker" placeholder="(e.g., AAPL, GM, etc.)"/>
+      </div>
+      <div class="formfield">
+        <label for="company">Company: </label>
+        <input type="text" name="company" placeholder="(e.g., Apple Inc., General Motors Inc., etc.)"/>
+      </div>
+      <div class="formfield">
+        <label for="price">Last Closing Price: $</label>
+        <input type="text" name="price" placeholder="(e.g. 23.72)"/>
+      </div>
+      <div class="formfield">
+        <label for="ticker">Description: </label>
+        <textarea name="description" placeholder="Company description here..."></textarea>
+      </div>
+      <input type="submit" value="SUBMIT" class=""/>
+    </form>
+  </body>
+</html>
