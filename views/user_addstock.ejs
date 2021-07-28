@@ -7,7 +7,7 @@
   </head>
   <body>
     <h2>Add New Security To Your Portfolio</h2>
-    <button type="button" name="back" onclick="location.href='/users/<%=currentUser.id%>'">BACK TO PORTFOLIO</button>
+    <button type="button" name="back" onclick="location.href='/users/<%=currentUser._id%>'">BACK TO PORTFOLIO</button>
     <form class="form" action="/users/addstock/<%=currentUser._id%>?_method=PUT" method="POST">
       <div class="formfield">
         <label for="ticker">Ticker Symbol: </label>
