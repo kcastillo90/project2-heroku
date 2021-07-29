@@ -11,9 +11,11 @@ Due to time constraints and my having spent a lot of time on making my routes' f
 -node (package manager)
 -mongodb (database)
 -ejs (embedded JavaScript, for JS functionality within html)
+-ejs partials for head and headers
 -express-session (for user authorization)
 -jquery (installed but unused due to lack of API implementation)
 -mongoose (communication between server and database)
+-css Bootstrap for styling
 
 ### Approach Taken:
 I initially created a single page with a list of stocks using full CRUD that anyone could edit, add to, see, or delete from. I populated the list from a seed file and new stocks were added via a "Stocks" schema. I then added user creation and session routes/schema and added user authorization to the create, update, and delete routes. I took this a step forward by adding a portfolio key to the user account schema and created new ejs files for the user portfolio and add stock features with the portfolio value being an array with the Stock schema in it. Now each user had CRUD capability for their account only. I removed my initial routes and stock list from my sites homepage and moved on to styling the site.
