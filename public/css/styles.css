@@ -228,13 +228,215 @@ textarea {
 /* FOR DESKTOP: */
 /* =============================== */
 
-/* @media (min-width: 765px) {
+@media (min-width: 765px) {
 
   body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: blue !important;
+    margin: 0;
   }
 
-} */
+  header {
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #login-create-btns {
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+
+  .logoandname {
+    justify-content: flex-start;
+  }
+
+  .header-title {
+    width: 22%;
+  }
+
+  #alt-header {
+    justify-content: center;
+  }
+
+  .welcome-logout {
+    width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 2vh;
+  }
+
+  #header-welcome {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5vh;
+  }
+
+  #logout-btn {
+  }
+
+  .login-signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .login-h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5vh;
+    margin: 0 0 3vh 0;
+  }
+
+  #login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5vw;
+  }
+
+  #login-submit-btn {
+    margin-top: 3vh;
+    width: 100%;
+  }
+  #signup-submit-btn {
+    margin: 3vh;
+    width: 100%;
+  }
+
+  input[type=submit] {
+    font-size: 2.5vh;
+  }
+
+  input[type=text] {
+    font-size: 3.5vh;
+  }
+
+  input[type=password] {
+    font-size: 3.5vh;
+  }
+
+  .form-label {
+    font-size: 3.5vh;
+  }
+
+  #add-btn {
+    margin: 0 0 2vh 0;
+    font-size: 1.5vh;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .table-container {
+    width: 95vw;
+  }
+
+  table {
+    font-size: 1.25vh;
+    width: 90vw;
+    text-align: center;
+  }
+
+  th {
+    font-size: 1.5vh;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  /* For portfolio page */
+  #back-to-portfolio-btn {
+    font-size: 1.5vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 2vh auto;
+  }
+
+  textarea {
+      resize: none;
+      height: 30vh;
+      width: 75vw;
+  }
+
+  .stock-form {
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #add-stock-h2 {
+    font-size: 3vh;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #add-stock-submit {
+    margin: 2vh auto;
+    align-self: center;
+    width: 100%;
+  }
+
+  /* For show page */
+  #back-to-stocks-btn {
+    font-size: 1.5vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto 3vh auto;
+  }
+
+  #edit-btn {
+    font-size: 1.5vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 2vh auto;
+  }
+
+  .company {
+    font-size: 4vh;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2vh;
+  }
+
+  .show-details {
+    font-size: 3vh;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2vh;
+  }
+
+  #show-description {
+    width: 90vw;
+    height: auto;
+    font-size: 2vh;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2vh;
+    word-wrap: break-word;
+  }
+
+  #edit-stock-submit {
+    margin: 2vh auto;
+    align-self: center;
+    width: 100%;
+  }
+
+  /* For edit page */
+  #back-to-stock {
+    font-size: 1.5vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto 3vh auto;
+  }
+
+  #homepageh2 {
+    font-size: 4vh;
+    text-align: center;
+    width: 90%;
+  }
+
+
+
+
+
+
+
+}
 
 @media (max-height: 470px) {
   header {
