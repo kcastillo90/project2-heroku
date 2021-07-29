@@ -4,10 +4,12 @@
     <h1 class='header-title'>Random Financial</h1>
   </div>
   <% if (currentUser) { %>
-    <h5 id="header-welcome">Welcome back, <%=currentUser.firstname%></h5>
-    <form action="/sessions?_method=DELETE" method="POST" id="logout-btn">
-      <input type="submit" name="logout" value="Log Out" class="btn btn-danger">
-    </form>
+    <div class="welcome-logout">
+      <h5 id="header-welcome">Welcome back, <%=currentUser.firstname%></h5>
+      <form action="/sessions?_method=DELETE" method="POST" id="logout-btn">
+        <input type="submit" name="logout" value="Log Out" class="btn btn-danger">
+      </form>
+    </div>
   <% } else { %>
     <div id="login-create-btns">
       <form action="/users/new" method="GET" id="create-account-btn">

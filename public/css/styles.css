@@ -5,15 +5,17 @@ header {
   padding: 10px;
   margin: 0 auto 5vh auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logoandname {
+  width: 95%;
   display: flex;
   flex-direction: row;
-  align-self: flex-start;
   align-items: flex-end;
+  justify-content: center;
 }
 
 .logo {
@@ -23,12 +25,11 @@ header {
   border-radius: 5%;
   background: #05076B !important;
   color: #009DAB;
-  padding: 3px;
-  margin-top: 2vh;
+  margin: 1vh;
 }
 
 .header-title {
-  width: 20vw;
+  width: 70%;
   font-family: 'Orbitron', sans-serif;
   font-size: 6vh;
   word-wrap: normal;
@@ -40,26 +41,30 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   align-content: center;
   justify-content: center;
 }
 
+.welcome-logout {
+  width: 90%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 2vh;
+}
+
 #header-welcome {
-  align-self: flex-start;
-  margin: 0 0 0 10vw;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.75vh;
+  font-size: 2.5vh;
 }
 
 #create-account-btn, #login-btn {
   margin: 1vh 2vw;
-  align-self: flex-end;
 }
 
 #logout-btn {
-  align-self: flex-end;
-  margin: 0 10vw 0 0;
 }
 
 body {
@@ -77,9 +82,9 @@ body {
 }
 
 .login-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 3vh;
-  margin: 0 0 2vh 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5vh;
+  margin: 0 0 3vh 0;
 }
 
 #create-account-submit {
@@ -91,15 +96,15 @@ input[type=submit] {
 }
 
 input[type=text] {
-  font-size: 1.5vh;
+  font-size: 3.5vh;
 }
 
 input[type=password] {
-  font-size: 1.5vh;
+  font-size: 3.5vh;
 }
 
 .form-label {
-  font-size: 1.5vh;
+  font-size: 3.5vh;
 }
 
 #alt-header-btn {
@@ -210,17 +215,13 @@ textarea {
 /* FOR DESKTOP: */
 /* =============================== */
 
-@media (min-width: 765px) {
+/* @media (min-width: 765px) {
 
   body {
     background: blue !important;
   }
 
-
-
-
-
-}
+} */
 
 @media (max-height: 470px) {
   header {
