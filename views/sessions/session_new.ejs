@@ -7,13 +7,13 @@
   <body>
     <div id="login-container">
       <h1 class="login-h1">LOGIN</h1>
-      <form action="/sessions" method="POST">
+      <form action="/sessions" method="POST" id="login-form">
         <label for="username" class="form-label">Username </label>
         <input type="text" name="username" class="form-control" required/>
         <label for="color" class="form-label">Password </label>
         <input type="password" name="password" class="form-control"/>
         <br>
-        <input type="submit" value="SUBMIT" class="btn btn-success">
+        <input type="submit" value="SUBMIT" class="btn btn-success" id="login-submit-btn">
       </form>
     </div>
   </body>

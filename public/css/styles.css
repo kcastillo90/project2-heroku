@@ -79,6 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 }
 
 .login-h1 {
@@ -87,12 +88,22 @@ body {
   margin: 0 0 3vh 0;
 }
 
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5vw;
+}
+
+#login-submit-btn {
+  margin-top: 3vh;
+}
+
 #create-account-submit {
-  margin: 1vh auto;
+  margin: 1.5vh auto;
 }
 
 input[type=submit] {
-  font-size: 1.5vh;
+  font-size: 2.5vh;
 }
 
 input[type=text] {
