@@ -20,7 +20,7 @@ header {
 .logo {
   font-family: 'Orbitron', sans-serif;
   font-size: 15vh;
-  border: 6px solid #009DAB;
+  border: 6px solid #cdcdcd;
   border-radius: 5%;
   background: #05076B !important;
   color: #cdcdcd;
@@ -276,7 +276,7 @@ textarea {
   }
 
   .logo {
-    border: 3px solid #009DAB;
+    border: 3px solid #cdcdcd;
   }
 
   th {
