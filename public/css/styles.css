@@ -201,6 +201,7 @@ textarea {
   font-family: 'Roboto', sans-serif;
   margin-top: 2vh;
   word-wrap: break-word;
+  text-align: center;
 }
 
 #edit-stock-submit {
@@ -211,7 +212,7 @@ textarea {
 
 /* For edit page */
 #back-to-stock {
-  font-size: 1.5vh;
+  font-size: 2.5vh;
   font-family: 'Roboto', sans-serif;
   margin: 0 auto 3vh auto;
 }
@@ -220,6 +221,10 @@ textarea {
   font-size: 4vh;
   text-align: center;
   width: 90%;
+}
+
+#signup-required {
+  font-size: 2vh;
 }
 
 /* =============================== */
@@ -232,7 +237,6 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: blue !important;
     margin: 0;
   }
 
@@ -250,22 +254,89 @@ textarea {
     align-self: flex-end;
   }
 
-  .logoandname {
-    width: 50%;
-    justify-content: flex-start;
-  }
-
   .header-title {
-    width: 55%;
+    width: 45%;
   }
 
   #alt-header {
     justify-content: center;
   }
 
+  .logoandname h1{
+    justify-content: center;
+  }
 
+  th {
+    font-size: 3.5vh;
+  }
 
+  td {
+    font-size: 3vh;
+  }
+
+  #showpage-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #show-description {
+    width: 20vw;
+    text-align: center;
+    font-size: 2.5vh;
+  }
+
+  .stock-form {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #edit-stock-submit {
+    width: auto;
+    margin: 2vh auto;
+    align-self: center;
+  }
+
+  #add-stock-submit {
+    width: auto;
+    margin: 2vh auto;
+    align-self: center;
+  }
+
+  input[type=submit] {
+    font-size: 2.5vh;
+  }
+
+  input[type=text] {
+    font-size: 2.5vh;
+  }
+
+  input[type=password] {
+    font-size: 2.5vh;
+  }
+
+  .form-label {
+    font-size: 2.5vh;
+  }
+
+  #edit-btn {
+    font-size: 2.5vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 2vh auto;
+  }
+
+  #add-btn {
+    margin: 0 0 2vh 0;
+    font-size: 2.5vh;
+    font-family: 'Roboto', sans-serif;
+  }
 }
+
+/* =============================== */
+/* FOR REALLY SMALL VH: */
+/* =============================== */
 
 @media (max-height: 470px) {
   header {
