@@ -1,1 +1,2 @@
-# project2-heroku
+# PROJECT 2 - RANDOM FINANCIAL STOCK PORTFOLIO SITE
+## Kyle Castillo
