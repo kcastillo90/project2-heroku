@@ -75,7 +75,7 @@ body {
   margin: 0;
 }
 
-#login-container {
+.login-signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,10 +96,11 @@ body {
 
 #login-submit-btn {
   margin-top: 3vh;
+  width: 100%;
 }
-
-#create-account-submit {
-  margin: 1.5vh auto;
+#signup-submit-btn {
+  margin: 3vh;
+  width: 100%;
 }
 
 input[type=submit] {
@@ -116,14 +117,6 @@ input[type=password] {
 
 .form-label {
   font-size: 3.5vh;
-}
-
-#alt-header-btn {
-  height: 4vh;
-  font-size: 1.5vh;
-  font-family: 'Roboto', sans-serif;
-  align-self: center;
-  margin-bottom: 1vh;
 }
 
 #add-btn {
@@ -175,6 +168,7 @@ textarea {
 #add-stock-submit {
   margin: 2vh auto;
   align-self: center;
+  width: 100%;
 }
 
 /* For show page */
@@ -214,6 +208,7 @@ textarea {
 #edit-stock-submit {
   margin: 2vh auto;
   align-self: center;
+  width: 100%;
 }
 
 /* For edit page */
@@ -221,6 +216,12 @@ textarea {
   font-size: 1.5vh;
   font-family: 'Roboto', sans-serif;
   margin: 0 auto 3vh auto;
+}
+
+#homepageh2 {
+  font-size: 4vh;
+  text-align: center;
+  width: 90%;
 }
 
 /* =============================== */
