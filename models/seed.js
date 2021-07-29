@@ -43,7 +43,7 @@ module.exports = [
   },
   {
     ticker: 'GM',
-    company: 'General Motors Company (GM',
+    company: 'General Motors Company',
     price: '54.94',
     description: 'General Motors Company designs, builds, and sells cars, trucks, crossovers, and automobile parts worldwide. The company operates through GM North America, GM International, Cruise, and GM Financial segments. It markets its vehicles primarily under the Buick, Cadillac, Chevrolet, GMC, Holden, Baojun, and Wuling brand names. The company also sells trucks, crossovers, and cars to dealers for consumer retail sales, as well as to fleet customers, including daily rental car companies, commercial fleet customers, leasing companies, and governments. In addition, it offers safety and security services for retail and fleet customers, including automatic crash response, emergency services, roadside assistance, crisis assist, stolen vehicle assistance, and turn-by-turn navigation, as well as connected services comprising mobile applications for owners to remotely control their vehicles and electric vehicle owners to locate charging stations, on-demand vehicle diagnostics, smart driver, marketplace in-vehicle commerce, connected navigation, SiriusXM with 360L, and 4G LTE wireless connectivity. Further, the company provides automotive financing services; and operates an online store. General Motors Company was founded in 1908 and is headquartered in Detroit, Michigan. Credit: www.finance.yahoo.com'
   },

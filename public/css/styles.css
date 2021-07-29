@@ -48,7 +48,7 @@ header {
   align-self: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: nowrap;
   margin-bottom: 2vh;
 }
@@ -56,6 +56,8 @@ header {
 #header-welcome {
   font-family: 'Roboto', sans-serif;
   font-size: 2.5vh;
+  margin-right: 10vw;
+  margin-top: 1vh;
 }
 
 #create-account-btn, #login-btn {
@@ -146,7 +148,7 @@ th {
 }
 
 textarea {
-    resize: none;
+  resize: both;
     height: 30vh;
     width: 75vw;
 }
@@ -249,6 +251,13 @@ textarea {
     align-items: center;
   }
 
+  #header-welcome {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5vh;
+    margin-right: 5vw;
+    margin-top: 1vh;
+  }
+
   #login-create-btns {
     justify-content: flex-end;
     align-self: flex-end;
@@ -267,11 +276,11 @@ textarea {
   }
 
   th {
-    font-size: 3.5vh;
+    font-size: 2.5vh;
   }
 
   td {
-    font-size: 3vh;
+    font-size: 2vh;
   }
 
   #showpage-body {
@@ -281,7 +290,7 @@ textarea {
   }
 
   #show-description {
-    width: 20vw;
+    width: 70vw;
     text-align: center;
     font-size: 2.5vh;
   }
@@ -331,6 +340,14 @@ textarea {
     margin: 0 0 2vh 0;
     font-size: 2.5vh;
     font-family: 'Roboto', sans-serif;
+  }
+
+  #back-to-stocks-btn {
+    font-size: 2.5vh;
+  }
+
+  #back-to-portfolio-btn {
+    font-size: 2.5vh;
   }
 }
 
