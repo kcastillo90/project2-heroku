@@ -1,26 +1,46 @@
 header {
   background: #FAACA4;
   width: 100vw;
-  height: 15vh;
+  height: 30vh;
   padding: 10px;
   margin: 0 auto 5vh auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logoandname {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  align-items: flex-end;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15vh;
+  border: 3px solid #009DAB;
+  border-radius: 5%;
+  background: #05076B !important;
+  color: #009DAB;
+  padding: 3px;
+  margin-top: 2vh;
 }
 
 .header-title {
+  width: 20vw;
   font-family: 'Orbitron', sans-serif;
-  font-size: 4.5vh;
-  margin: 0 0 2vh 0;
+  font-size: 6vh;
+  word-wrap: normal;
+  margin-left: 1vw;
 }
 
 #login-create-btns {
   width: 15vw;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+
   align-content: center;
   justify-content: center;
 }
@@ -33,7 +53,8 @@ header {
 }
 
 #create-account-btn, #login-btn {
-  margin: 0 2vw;
+  margin: 1vh 2vw;
+  align-self: flex-end;
 }
 
 #logout-btn {
@@ -82,8 +103,10 @@ input[type=password] {
 }
 
 #alt-header-btn {
+  height: 4vh;
   font-size: 1.5vh;
   font-family: 'Roboto', sans-serif;
+  align-self: center;
 }
 
 #add-btn {
@@ -188,197 +211,29 @@ textarea {
 /* =============================== */
 
 @media (min-width: 765px) {
+
+  body {
+    background: blue !important;
+  }
+
+
+
+
+
+}
+
+@media (max-height: 470px) {
   header {
-    background: #FAACA4;
-    width: 100vw;
-    height: 15vh;
-    padding: 10px;
-    margin: 0 auto 5vh auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 40vh;
   }
 
   .header-title {
+    width: 20vw;
     font-family: 'Orbitron', sans-serif;
-    font-size: 4.5vh;
-    margin: 0 0 2vh 0;
+    font-size: 6vh;
+    word-wrap: normal;
+    margin-left: 1vw;
   }
-
-  #login-create-btns {
-    width: 15vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-  }
-
-  #header-welcome {
-    align-self: flex-start;
-    margin: 0 0 0 10vw;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.75vh;
-  }
-
-  #create-account-btn, #login-btn {
-    margin: 0 2vw;
-  }
-
-  #logout-btn {
-    align-self: flex-end;
-    margin: 0 10vw 0 0;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background:#DCFDE5 !important;
-    margin: 0;
-  }
-
-  #login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .login-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3vh;
-    margin: 0 0 2vh 0;
-  }
-
-  #create-account-submit {
-    margin: 1vh auto;
-  }
-
-  input[type=submit] {
-    font-size: 1.5vh;
-  }
-
-  input[type=text] {
-    font-size: 1.5vh;
-  }
-
-  input[type=password] {
-    font-size: 1.5vh;
-  }
-
-  .form-label {
-    font-size: 1.5vh;
-  }
-
-  #alt-header-btn {
-    font-size: 1.5vh;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  #add-btn {
-    margin: 0 0 2vh 0;
-    font-size: 1.5vh;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .table-container {
-    width: 95vw;
-  }
-
-  table {
-    font-size: 1.25vh;
-    width: 90vw;
-    text-align: center;
-  }
-
-  th {
-    font-size: 1.5vh;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  /* For portfolio page */
-  #back-to-portfolio-btn {
-    font-size: 1.5vh;
-    font-family: 'Roboto', sans-serif;
-    margin: 2vh auto;
-  }
-
-  textarea {
-      resize: none;
-      height: 30vh;
-      width: 75vw;
-  }
-
-  .stock-form {
-    width: 75vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #add-stock-h2 {
-    font-size: 3vh;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  #add-stock-submit {
-    margin: 2vh auto;
-    align-self: center;
-  }
-
-  /* For show page */
-  #back-to-stocks-btn {
-    font-size: 1.5vh;
-    font-family: 'Roboto', sans-serif;
-    margin: 0 auto 3vh auto;
-  }
-
-  #edit-btn {
-    font-size: 1.5vh;
-    font-family: 'Roboto', sans-serif;
-    margin: 2vh auto;
-  }
-
-  .company {
-    font-size: 4vh;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 2vh;
-  }
-
-  .show-details {
-    font-size: 3vh;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 2vh;
-  }
-
-  #show-description {
-    width: 90vw;
-    height: auto;
-    font-size: 2vh;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 2vh;
-    word-wrap: break-word;
-  }
-
-  #edit-stock-submit {
-    margin: 2vh auto;
-    align-self: center;
-  }
-
-  /* For edit page */
-  #back-to-stock {
-    font-size: 1.5vh;
-    font-family: 'Roboto', sans-serif;
-    margin: 0 auto 3vh auto;
-  }
-
-
-
-
-
-
-
-
+}
 
 /*  */

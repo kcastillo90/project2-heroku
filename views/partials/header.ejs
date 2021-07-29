@@ -1,5 +1,8 @@
 <header>
-  <h1 class='header-title'>Random Financial</h1>
+  <div class="logoandname">
+    <h1 class="logo">R</h1>
+    <h1 class='header-title'>Random Financial</h1>
+  </div>
   <% if (currentUser) { %>
     <h5 id="header-welcome">Welcome back, <%=currentUser.firstname%></h5>
     <form action="/sessions?_method=DELETE" method="POST" id="logout-btn">
