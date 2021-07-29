@@ -1,6 +1,6 @@
 # PROJECT 2 - RANDOM FINANCIAL STOCK PORTFOLIO SITE
 
-(https://ancient-fjord-16347.herokuapp.com/ "Random Financial")
+https://ancient-fjord-16347.herokuapp.com/
 
 My goal with this project was to have a functional, simulated brokerage site in which a user could input a ticker symbol for a desired stock into a form and have an API return that company's name, current price (or last closing price for the sake of cost), and a description of the company (or if not, leave a blank field in the form for the user to leave notes in).
 
