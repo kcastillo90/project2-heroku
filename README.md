@@ -30,3 +30,4 @@ Another issue is that whenever a stock is added, updated, or deleted by a user t
 -Add API first to the homepage grabbing a fixed list of stocks and their details as a test.
 -Add API functionality to individual user accounts so that at least the price, if not additional details (company name, info, etc.) are added from the API, so that the db only has to store the username and a list of ticker symbols.
 -Add a fake money market account with some default value in dollars, and the ability for users to specify shares they'd like to buy or sell. Those shares will then be added or removed from their holdings and money added or removed from their fund. A total value updated with price from API for each stock, and the portfolio total can then be added.
+-Separate CSS files for header/alt-header and pages
